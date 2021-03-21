@@ -1,8 +1,7 @@
 import os
 from anki.storage import Collection
 
-chapter = "lee_riemannian_manifolds_chapter_2.tex"
-deck_name = "Introduction to Riemannian Manifolds::Chapter X"
+chapter = "lee_riemannian_manifolds_chapter_7.tex"
 
 
 def get_latex(case, tmp_line, mode):
@@ -23,7 +22,7 @@ def create_flashcard(begin_line, end_line, mode):
     file = open(path_file_write, "r")
     temp_string = file.read()
     # Find the Anki directory
-    anki_home = 'C:/Users/Nik/Documents/IDE Projects/Anki/User 1'
+    anki_home = 'C:/Users/Nik/Documents/GitHub/LaTeX_to_Anki_Script/Anki_Sandbox/User 1'
     anki_collection_path = os.path.join(anki_home, "collection.anki2")
 
     # 1. Load the anki collection
@@ -36,7 +35,7 @@ def create_flashcard(begin_line, end_line, mode):
     else:
         modelBasic = col.models.byName('2. Proof LaTeX')
     # Set the deck
-    deck = col.decks.byName(deck_name)
+    deck = col.decks.byName("Default")
     col.decks.select(deck['id'])
     col.decks.current()['mid'] = modelBasic['id']
 
@@ -66,7 +65,7 @@ path_file_read = os.sep.join([path_dir_read, chapter])
 file_read = open(path_file_read, "r")
 
 # Open File: WRITE
-path_dir_write: str = r"C:\Users\Nik\Documents\IDE Projects\PyCharm\LaTeX"
+path_dir_write: str = r"C:\Users\Nik\Documents\GitHub\LaTeX_to_Anki_Script\Temp"
 temp_file = "temp.txt"
 path_file_write = os.sep.join([path_dir_write, temp_file])
 
@@ -99,5 +98,5 @@ while True:
         file_read.close()
         break
 
-# cd C:\Users\Nik\Documents\IDE Projects
-# "C:\Program Files\Anki\anki.exe" -b "Anki"
+# cd C:\Users\Nik\Documents\GitHub\LaTeX_to_Anki_Script
+# "C:\Program Files\Anki\anki.exe" -b "Anki_Sandbox"
