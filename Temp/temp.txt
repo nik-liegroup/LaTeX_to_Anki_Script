@@ -1,9 +1,4 @@
-Let $(M, g)$ be a Riemannian or pseudo-Riemannian manifold and consider the overdetermined system of equations
+Suppose $M$ is a smooth manifold, $V \in \mathfrak{X}(M)$ and $\omega \in \Omega^{*}(M)$. Then
 $$
-\nabla \xi=A(\xi),
+\mathscr{L}_{V}(d \omega)=d(\mathscr{L}_{V} \omega).
 $$
-where $A: T^{*} M \rightarrow T^{2} T^{*} M$ is a smooth map such that for any smooth covector field $\xi$, the $3$-tensor field $\nabla(A(\xi))$ satisfies the following identity when $A(\xi)$ is substituted for $\nabla \xi$ wherever it appears
-$$
-A(\xi)_{i j ; k}-A(\xi)_{i k ; j}= \tensor{R}{_j _k _i ^l} \xi_{l}.
-$$
-Then for every $p \in M$ and every covector $\eta_{0} \in T_{p}^{*} M$, there is a smooth solution to $\nabla \xi=A(\xi)$ on a neighborhood of $p$ satisfying $\xi_{p}=\eta_{0}$.

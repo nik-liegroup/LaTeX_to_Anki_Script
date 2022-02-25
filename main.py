@@ -1,7 +1,7 @@
 import os
 from anki.storage import Collection
 
-chapter = "lee_riemannian_manifolds_chapter_7.tex"
+chapter = "lee_smooth_manifolds_chapter_14.tex"
 
 
 def get_latex(case, tmp_line, mode):
@@ -60,7 +60,7 @@ def create_flashcard(begin_line, end_line, mode):
 
 # Open File: READ
 path_dir_read: str = r"C:\Users\Nik\Documents\GitHub\LaTeX\Mathmatical Physics" \
-                     r"\Introduction to Riemannian Manifolds\Chapter"
+                     r"\Introduction to Smooth Manifolds\Chapter"
 path_file_read = os.sep.join([path_dir_read, chapter])
 file_read = open(path_file_read, "r")
 
